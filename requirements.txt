@@ -2,6 +2,7 @@ streamlit
 langchain
 huggingface_hub
 faiss-cpu
-crewai
 fpdf
 faker
+python-dotenv
+git+https://github.com/joaomdmoura/crewai.git
