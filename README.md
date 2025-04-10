@@ -1,1 +1,2 @@
-# Student-Admission-Automation
+# Student Admission Automation Project
+Built by Creative Codex
