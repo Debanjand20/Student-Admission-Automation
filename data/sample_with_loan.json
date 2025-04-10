@@ -1,0 +1,11 @@
+{
+  "name": "Ravi Sharma",
+  "dob": "2004-02-17",
+  "marks": 82,
+  "documents": {
+    "marksheet": "uploaded",
+    "id_proof": "uploaded"
+  },
+  "loan_request": 150000,
+  "email": "ravi.sharma@example.com"
+}
