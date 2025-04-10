@@ -1,0 +1,3 @@
+Tuition: ₹50000
+Hostel: ₹30000
+Exam: ₹5000
