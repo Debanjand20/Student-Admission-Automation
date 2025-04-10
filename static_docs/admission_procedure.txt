@@ -1,1 +1,9 @@
-Admission procedure details...
+University Admission Procedure:
+
+1. Candidates must fill out the online application form available on the university website.
+2. Submit all required documents: marksheets, ID proof, passport-size photo, and other relevant certificates.
+3. Applications are verified by the Admission Office and Document Checking Agent.
+4. Shortlisting is based on eligibility criteria and available seats.
+5. Selected students may apply for educational loans if needed.
+6. Upon approval, students receive an official admission letter and fee slip.
+7. Fee payment must be completed by the given deadline to confirm admission.
