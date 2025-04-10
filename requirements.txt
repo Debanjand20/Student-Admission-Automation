@@ -1,7 +1,7 @@
 streamlit
 langchain
 huggingface_hub
-chromadb
+faiss-cpu
 crewai
 fpdf
 faker
