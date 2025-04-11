@@ -6,14 +6,14 @@ from langchain.tools import tool
 def verify_documents(application):
     """
     Verifies the student application for required fields and documents.
-
+    
     This function checks if the application contains all the necessary fields:
     'name', 'dob', 'marks', and 'documents'. It then verifies that the required
     documents ('marksheet', 'id_proof') are present in the application's documents.
-
+    
     Parameters:
         application (dict): A dictionary representing a student application.
-
+        
     Returns:
         str: A message indicating which fields or documents are missing,
              or a success message if all validations pass.
@@ -34,12 +34,16 @@ def verify_documents(application):
 
     return "✅ All documents verified successfully."
 
-# Define the agent with the tool converted to a dictionary.
+# Ensure the tool has an implementation for the abstract _run method by patching it
+if not hasattr(verify_documents, "_run"):
+    verify_documents._run = verify_documents.run
+
+# Define the agent using the patched tool
 document_checker = Agent(
     role="Document Checking Agent",
     goal="Verify uploaded admission documents and flag incomplete applications.",
     backstory="Expert in document validation with experience in university admissions.",
-    tools=[verify_documents.dict()],  # Convert the StructuredTool to a dict
+    tools=[verify_documents],
     verbose=True
 )
 
