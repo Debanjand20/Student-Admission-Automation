@@ -7,7 +7,7 @@ faiss-cpu
 fpdf
 faker
 python-dotenv
-
+pysqlite3
 pandas
 numpy
 scikit-learn
