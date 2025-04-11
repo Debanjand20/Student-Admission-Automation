@@ -1,3 +1,29 @@
+from langchain.tools import tool
+
+@tool
+def verify_documents(application):
+    """
+    Verifies that the application contains all required fields.
+    
+    Checks if the provided application dictionary includes the fields:
+    'name', 'dob', 'marks', and 'documents'. Returns a status and message 
+    indicating whether the verification succeeded or lists the missing fields.
+    
+    Parameters:
+        application (dict): The application data.
+        
+    Returns:
+        dict: A dictionary with a status ('success' or 'error') and a message.
+    """
+    required_fields = ["name", "dob", "marks", "documents"]
+    missing_fields = [field for field in required_fields if field not in application]
+    
+    if missing_fields:
+        return {"status": "error", "message": f"Missing fields: {', '.join(missing_fields)}"}
+    return {"status": "success", "message": "All documents are verified."}
+
+
+
 from crewai import Agent, Task, Crew
 from langchain.tools import tool
 
