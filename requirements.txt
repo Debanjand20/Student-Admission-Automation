@@ -1,7 +1,6 @@
 crewai
 crewai_tools
 streamlit
-pysqlite3
 langchain
 huggingface_hub
 faiss-cpu
