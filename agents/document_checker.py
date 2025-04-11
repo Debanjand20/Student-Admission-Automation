@@ -15,7 +15,8 @@ def verify_documents(application):
         application (dict): A dictionary representing a student application.
 
     Returns:
-        str: A message indicating which fields or documents are missing, or a success message if all validations pass.
+        str: A message indicating which fields or documents are missing,
+             or a success message if all validations pass.
     """
     required_fields = ["name", "dob", "marks", "documents"]
     missing_fields = [field for field in required_fields if field not in application]
@@ -33,12 +34,12 @@ def verify_documents(application):
 
     return "✅ All documents verified successfully."
 
-# Define the agent
+# Define the agent with the tool converted to a dictionary.
 document_checker = Agent(
     role="Document Checking Agent",
     goal="Verify uploaded admission documents and flag incomplete applications.",
     backstory="Expert in document validation with experience in university admissions.",
-    tools=[verify_documents],
+    tools=[verify_documents.dict()],  # Convert the StructuredTool to a dict
     verbose=True
 )
 
