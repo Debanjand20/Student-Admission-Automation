@@ -1,6 +1,5 @@
-_import_('pysqlite3')
+import sqlite3
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 import json
 from agents.document_checker import run_doc_check
